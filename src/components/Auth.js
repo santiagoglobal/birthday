@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
-import Logo from '../assets/logo.png';
+// import Logo from '../assets/logo.png';
 
 export default function Auth() {
     const [isLogin, setIsLogin] = useState(true);
@@ -10,10 +10,10 @@ export default function Auth() {
     const changeForm = () => {
         setIsLogin(!isLogin);
     }
-
+ 
     return (
         <View style={styles.view}>
-            <Image style={styles.logo} source={Logo} />
+            <Image style={{width: 330, height: 220, marginTop: 20, marginBottom: 30}} source={require('../assets/logo.png')} />
             {isLogin ? <LoginForm changeForm={changeForm} /> : <RegisterForm changeForm={changeForm} />}
         </View>
     );
@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
     },
-    logo: {
-        width: "80%",
-        height: 240,
-        marginTop: 50,
-        marginBottom: 50,
-        // alignSelf: 'center',
-    }
+    // logo: {
+    //     // width: 66,
+    //     // height: 58,
+    //     // marginTop: 50,
+    //     // marginBottom: 50,
+    //     // alignSelf: 'center',
+    // }
 });
