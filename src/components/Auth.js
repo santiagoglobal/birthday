@@ -13,8 +13,9 @@ export default function Auth() {
  
     return (
         <View style={styles.view}>
-            <Image style={{width: 340, height: 220, marginTop: 20, marginBottom: 30, marginLeft:20, marginRight: 20}} source={require('../assets/logo.png')} />
-            {isLogin ? <LoginForm changeForm={changeForm} /> : <RegisterForm changeForm={changeForm} />}
+
+           <Image style={{width: 340, height: 220, marginTop: 20, marginBottom: 30, marginLeft:20, marginRight: 20}} source={require('../assets/logo.png')} />
+           {isLogin ? <LoginForm changeForm={changeForm} /> : <RegisterForm changeForm={changeForm} />}
         </View>
     );
 }
